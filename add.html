@@ -34,113 +34,126 @@
       <a class="navbar-brand" href="#page-top">tindfur</a>
     </nav>
 
-
-<!--     <h2 class="header"> tindfur </h2>
-
-<div class="jumbotron">
-    <div class="container">
-
-      <div id="gray">
-  <h2> meet your furfect match. </h2>
-</div>
-    </div>
-</div> -->
-
     <!-- Header -->
-    <img class="mySlides" src="img/puppy.jpg">
-  			<img class="mySlides" src="img/littlekid.jpg">
-			<img class="mySlides" src="img/dogbff.jpg">
-			<img class="mySlides" src="img/puppylove.jpg">
+  			<img class="mySlides" src="img/kitty.jpg">
+  			<img class="mySlides" src="img/collie.jpg">
+			<img class="mySlides" src="img/kitten.jpg">
+			<img class="mySlides" src="img/bunny.jpg">
 			
 			
-			<h1 id = "slideText"> bff comin' right up. </h1>
+			<h1 id = "slideText"> a happy home awaits. </h1>
+
+
+
+
+
 
 <!-- ===================================== FILTER BOX ========================================================== -->
 
-      <header class="filters">
+      <header class="profile">
       <div class="container">
-        <h5> FILTER PETS </h5>
+        <h5 id="petProf"> PET PROFILE </h5>
 
-        <hr id="hr">
+        <hr>
 
        <!--  ================ CHECKBOXES =============== -->
 
+       <!-- ================= HEADER ROW ============== -->
+
+        
+
+          <h6 id="tablehead"> My pet is: </h6>
+
        <!--  ================ ROW 1 =============== -->
+		<div class="row">
 
-        <div class="row">
-
-          <div class="col-md-4">
+          <div class="col-md-3 boxes">
             <label class="custom-control custom-checkbox">
               <input type="checkbox" class="custom-control-input">
               <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">Dogs</span> <br>
+              <span class="custom-control-description">Cat</span> <br>
             </label>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-3 boxes">
             <label class="custom-control custom-checkbox">
               <input type="checkbox" class="custom-control-input">
               <span class="custom-control-indicator"></span>
-              <span class="custom-control-description"> Baby </span> <br>
+              <span class="custom-control-description">Dog</span> <br>
             </label>           
           </div>
-          <div class="col-md-4">
-            <label class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">Male</span> <br>
-            </label>
-          </div>
-       </div>
-
-       <!--  ================ ROW 2 =============== -->
-
-        <div class="row">
-
-          <div class="col-md-4">
-            <label class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">Cats</span> <br>
-            </label>
-          </div>
-          <div class="col-md-4">
-            <label class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">Young Adult</span> <br>
-            </label>           
-          </div>
-          <div class="col-md-4">
-            <label class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">Female</span> <br>
-            </label>
-          </div>
-       </div>
-
-       <!--  ================ ROW 3 =============== -->
-
-        <div class="row">
-
-          <div class="col-md-4">
-            <label class="custom-control custom-checkbox">
+          <div class="col-md-3 boxes">
+          	<label class="custom-control custom-checkbox">
               <input type="checkbox" class="custom-control-input">
               <span class="custom-control-indicator"></span>
               <span class="custom-control-description">Other</span> <br>
-            </label>
-          </div>
-          <div class="col-md-4">
+            </label> 
+       	   </div>
+       	  <div class="col-md-3 boxes">
+       	  	<label class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Baby</span> <br>
+            </label> 
+       	   </div>
+
+
+
+       <!--  ================ ROW 2 =============== -->
+
+   
+
+          <div class="col-md-3 boxes">
             <label class="custom-control custom-checkbox">
               <input type="checkbox" class="custom-control-input">
               <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">Older Adult</span> <br>
+              <span class="custom-control-description">Young</span> <br>
+            </label>
+          </div>
+          <div class="col-md-3 boxes">
+            <label class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Older</span> <br>
             </label>           
           </div>
-          <div class="col-md-4">
-            <button type = "button" class="btn-primary" id="search"> SEARCH </button> <br> <br>
+          <div class="col-md-3 boxes">
+          	<label class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Male</span> <br>
+            </label> 
+       	   </div>
+       	  <div class="col-md-3 boxes">
+       	  	<label class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Female</span> <br>
+            </label> 
+       	   </div>
+
+       <!--  ================ ROW 3 =============== -->
+  
+        <div class="col-md-6 boxes">
+           Bio:
+           <div class="form-group">
+    			<textarea class="form-control" id="bioBox" rows="3"></textarea>
+ 			 </div>          
           </div>
-       </div>
+          <div class="col-md-6 boxes ">
+            <form>
+  				<div class="form-group">
+    				<label for="photoUpload">Photo:</label>
+    				<input type="photo" class="form-control" id="photoUpload" aria-describedby="photoUpload" placeholder="Photo URL Here">
+  				</div>
+  			</form>
+  			<button type = "button" class="btn-primary" id="submit"> SUBMIT </button> <br> <br>
+          </div>
+          
+
+
+     
+
+
 
 
 </div>
@@ -148,34 +161,7 @@
     </header>
     <br> 
 
-    <!-- ===================================== RESULTS BOX ========================================================== -->
 
-  <!--    <header class="filters"> -->
-
-     <header class="results">
-      <div class="container">
-
-      <div class="row">
-
-          <div class="col-md-6">
-             <img src="http://cdn3-www.dogtime.com/assets/uploads/gallery/pembroke-welsh-corgi-dog-breed-pictures/prance-8.jpg" id="photo" alt="Corgi" width="304" height="236"> 
-          </div>
-          <div class="col-md-6" class="results">
-
-
-            <h3 id="result"> Meet Max </h3>
-            <p id="resultsub"> Species: Dog | Age: Young Adult </p> 
-
-            <p id="bio"> insert bio here insert bio here insert bio here insert bio here
-            insert bio here insert bio here insert bio here insert bio here insert bio here
-            insert bio here insert bio here insert bio here insert bio here insert bio here
-            insert bio here insert bio here insert bio here insert bio here insert bio here
-            insert bio here insert bio here </p>
-          </div>
-
-            
-
-          </div>
 
   
          
@@ -222,20 +208,7 @@
       </div>
     </footer>
 
-<!-- jquery -->
-
- <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
-<script> 
-
-window.onload = function() {
-  $(".results").hide();
-};
-
-$("#search").click(function(){
-  $(".results").show();
-});
-</script>
-
+    <!-- jQuery/javaScript -->
 
 	<script type="text/javascript">
     var slideIndex = 0;
@@ -254,6 +227,8 @@ $("#search").click(function(){
 	}
 
 	</script>
+
+
 
 
 
