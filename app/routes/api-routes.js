@@ -10,24 +10,57 @@ var connection = require("../config/connection.js");
 // Routes
 // =============================================================
 module.exports = function(app) {
+  var IDnum = 1;
 
   // Get all chirps
   app.get("/search", function(req, res) {
 
-    var dbQuery = "SELECT * FROM pets WHERE id = 1";
+    var dbQuery = "SELECT * FROM pets WHERE animal_type = ? AND gender = ? AND age = ?";
 
-    connection.query(dbQuery, function(err, result) {
+    connection.query(dbQuery,[req.query.animal,req.query.gender,req.query.age], function(err, result) {
+      if(err){
+        console.log(err);
+      } else{
       var newresult = result[0];
+      // move to html routes
       res.render('search',newresult);
-      console.log(newresult);
+      // console.log(newresult);
+    }
     });
 
   });
 
+  app.get("/search/pets", function(req, res) {
+
+   console.log("animal " + req.query.animal);
+   console.log("gender " + req.query.gender);
+   console.log("age " + req.query.age);
+
+
+    var dbQuery = "SELECT * FROM pets WHERE animal_type = ? AND gender = ? AND age = ?";
+
+    connection.query(dbQuery,[req.query.animal,req.query.gender,req.query.age],function(err, result) {
+      if (err){
+        console.log(err)
+      } else {
+        console.log(result);
+      var newresult = result[0];
+      // move to html routes
+      
+      res.render('search',{ animal: newresult});
+
+      // console.log(newresult);
+    }
+    });
 
 
   
 
+
+
+  });
+  
+};
   // Add a chirp
   // app.post("/api/new", function(req, res) {
 
@@ -43,4 +76,4 @@ module.exports = function(app) {
 
   // });
 
-};
+

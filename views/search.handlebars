@@ -71,21 +71,21 @@
 
           <div class="col-md-4">
             <label class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input">
+              <input type="checkbox" class="custom-control-input" name="animaltype_name" id="dogs">
               <span class="custom-control-indicator"></span>
               <span class="custom-control-description">Dogs</span> <br>
             </label>
           </div>
           <div class="col-md-4">
             <label class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input">
+              <input type="checkbox" class="custom-control-input" id="baby" name="age_name">
               <span class="custom-control-indicator"></span>
               <span class="custom-control-description"> Baby </span> <br>
             </label>           
           </div>
           <div class="col-md-4">
             <label class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input">
+              <input type="checkbox" class="custom-control-input" id="male" name="gender_name">
               <span class="custom-control-indicator"></span>
               <span class="custom-control-description">Male</span> <br>
             </label>
@@ -98,21 +98,21 @@
 
           <div class="col-md-4">
             <label class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input">
+              <input type="checkbox" class="custom-control-input" id="cats" name="animaltype_name">
               <span class="custom-control-indicator"></span>
               <span class="custom-control-description">Cats</span> <br>
             </label>
           </div>
           <div class="col-md-4">
             <label class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input">
+              <input type="checkbox" class="custom-control-input" id="youngadult" name="age_name">
               <span class="custom-control-indicator"></span>
               <span class="custom-control-description">Young Adult</span> <br>
             </label>           
           </div>
           <div class="col-md-4">
             <label class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input">
+              <input type="checkbox" class="custom-control-input" id="female" name="gender_name">
               <span class="custom-control-indicator"></span>
               <span class="custom-control-description">Female</span> <br>
             </label>
@@ -125,14 +125,14 @@
 
           <div class="col-md-4">
             <label class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input">
+              <input type="checkbox" class="custom-control-input" id="other" name="animaltype_name">
               <span class="custom-control-indicator"></span>
               <span class="custom-control-description">Other</span> <br>
             </label>
           </div>
           <div class="col-md-4">
             <label class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input">
+              <input type="checkbox" class="custom-control-input" id="olderadult" name="age_name">
               <span class="custom-control-indicator"></span>
               <span class="custom-control-description">Older Adult</span> <br>
             </label>           
@@ -163,10 +163,16 @@
           <div class="col-md-6" class="results">
 
 
-            <h3 id="result"> Meet {{this.animal_name}} </h3>
-            <p id="resultsub"> Species: {{this.animal_type}} | Age: {{this.age}} </p> 
+            <h3 id="result"> Meet {{animal.animal_name}} </h3>
+            <p id="resultsub"> Species: {{animal.animal_type}} | Age: {{animal.age}} </p> 
 
-            <p id="bio"> {{this.bio}} </p>
+            <p id="bio"> {{animal.bio}} </p>
+
+            <button type = "button" class="btn-primary" id="match"> MATCH </button>
+
+            <button type = "button" class="btn-primary" id="next"> NEXT </button>
+
+
           </div>
 
             
@@ -234,6 +240,12 @@ $("#search").click(function(){
 
 
 	<script type="text/javascript">
+
+
+  // This is getting user input from checkboxes
+
+
+// This is for the slideshow
     var slideIndex = 0;
 	carousel();
 
