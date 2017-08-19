@@ -14,9 +14,7 @@ module.exports = function(app) {
   // Get all chirps
   app.get("/search", function(req, res) {
 
-    var dbQuery = "SELECT bio FROM pets WHERE id = 1";
-
-
+    var dbQuery = "SELECT * FROM pets WHERE id = 1";
 
     connection.query(dbQuery, function(err, result) {
       var newresult = result[0];
