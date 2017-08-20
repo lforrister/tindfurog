@@ -21,9 +21,12 @@
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
 
+
     <!--jQuery -->
-    
+
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+ 
 
   </head>
 
@@ -134,6 +137,22 @@
        <!--  ================ ROW 3 =============== -->
   
         <div class="col-md-6 boxes">
+           Name:
+           <input type="petName" class="form-control" id="petName" aria-describedby="petName" placeholder="Pet Name">        
+          </div>
+        <div class="col-md-6 boxes ">
+        	Location: <br>
+        	<select class="locationMenu">
+			  <option value="volvo">Dallas Pets Alive</option>
+			  <option value="saab">Humane Society of Dallas</option>
+			  <option value="mercedes"> Operation Kindness</option>
+			  <option value="audi">Pawlies Farm Cavaliers</option>
+			</select>
+		</div>
+
+        <!-- =============== ROW 4 ================== -->
+
+          <div class="col-md-6 boxes">
            Bio:
            <div class="form-group">
     			<textarea class="form-control" id="bioBox" rows="3"></textarea>
@@ -225,8 +244,11 @@
     	x[slideIndex-1].style.display = "block"; 
     	setTimeout(carousel, 2500); // Change image every 2 seconds
 	}
-
 	</script>
+
+
+
+
 
 
 
