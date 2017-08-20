@@ -14,7 +14,6 @@ module.exports = function(app) {
   // ---------------------------------------------------------------------------
 
   app.get("/search", function(req, res) {
-    console.log("p");
     
     res.sendFile(path.join(__dirname, "/../public/search.html"));
   });

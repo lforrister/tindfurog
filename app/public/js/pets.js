@@ -43,10 +43,31 @@ var longitude1;
       age: $('input[name="age_name"]:checked')[0].id
     }
 
-    console.log(userData);
+    // console.log(userData);
 
     $.get("/search/pets",userData,function(data){
-      console.log(data);
+
+    });
+
+  });
+
+    $("#submit").on("click",function(event){
+    event.preventDefault();
+    console.log('submitted');
+
+    var userData = {
+      animalname: "name",
+      animal: $('input[name="animaltype_name"]:checked')[0].id,
+      gender: $('input[name="gender_name"]:checked')[0].id,
+      age: $('input[name="age_name"]:checked')[0].id,
+      location: "location",
+      bio: "bio",
+      photo: "photo"
+    }
+
+    // console.log(userData);
+
+    $.post("/new",userData,function(data){
 
     });
 

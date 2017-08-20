@@ -25,6 +25,7 @@
     
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
+
   </head>
 
   <body class="index" id="page-top">
@@ -154,6 +155,7 @@
 
      <header class="results">
       <div class="container">
+      <script type="text/javascript" src="js/pets.js"></script>
 
       <div class="row">
 
@@ -162,11 +164,18 @@
           </div>
           <div class="col-md-6" class="results">
 
+            <h3 id="result"> Meet {{pts.animal_name}} </h3>
+            <p id="resultsub"> Species: {{animal_type}} | Age: {{this.id}} </p> 
 
-            <h3 id="result"> Meet {{animal.animal_name}} </h3>
-            <p id="resultsub"> Species: {{animal.animal_type}} | Age: {{animal.age}} </p> 
+            <p id="bio"> {{location}} </p>
+            
+       {{!--      <p>Flavor: </p>
+            <p>Price: ${{gender}}</p>
+            <p>Awesomeness: {{location}}</p>
+            <hr>
+       --}}
 
-            <p id="bio"> {{animal.bio}} </p>
+
 
             <button type = "button" class="btn-primary" id="match"> MATCH </button>
 
@@ -262,7 +271,7 @@ $("#search").click(function(){
 	}
 
 	</script>
-  <script type="text/javascript" src="js/pets.js"></script>
+  
 
 
 

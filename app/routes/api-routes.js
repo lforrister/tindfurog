@@ -5,52 +5,85 @@
 // Dependencies
 // =============================================================
 var connection = require("../config/connection.js");
+var Pet = require("../models/petconnection.js");
 
 
 // Routes
 // =============================================================
 module.exports = function(app) {
-  var IDnum = 1;
 
   // Get all chirps
-  app.get("/search", function(req, res) {
+  app.get("/search/pets", function(req, res) {
 
-    var dbQuery = "SELECT * FROM pets WHERE animal_type = ? AND gender = ? AND age = ?";
+    // var dbQuery = "SELECT * FROM pets WHERE animal_type = ? AND gender = ? AND age = ?";
 
-    connection.query(dbQuery,[req.query.animal,req.query.gender,req.query.age], function(err, result) {
-      if(err){
-        console.log(err);
-      } else{
-      var newresult = result[0];
-      // move to html routes
-      res.render('search',newresult);
-      // console.log(newresult);
-    }
-    });
+
+    // connection.query(dbQuery,[req.query.animal,req.query.gender,req.query.age], function(err, result) {
+    //   if(err){
+    //     // console.log(err);
+    //   } else{
+
+       
+
+    //   var newresult = result[0];
+    //   console.log(newresult);
+    //   newresult.stringify = JSON.stringify(newresult);
+    //   // $("#Flavor").html(newresult.)
+    //   // console.log("newresult: "+newresult);
+    //   // move to html routes
+    //   res.render('search',newresult);
+
+    // }
+    // });
+
+    Pet.findAll({}).then(function(result){
+      res.json(result);
+    })
 
   });
 
-  app.get("/search/pets", function(req, res) {
+  app.get("/search", function(req, res) {
 
-   console.log("animal " + req.query.animal);
-   console.log("gender " + req.query.gender);
-   console.log("age " + req.query.age);
+  // 
 
 
-    var dbQuery = "SELECT * FROM pets WHERE animal_type = ? AND gender = ? AND age = ?";
+  //   var dbQuery = "SELECT * FROM pets WHERE animal_type = ? AND gender = ? AND age = ?";
 
-    connection.query(dbQuery,[req.query.animal,req.query.gender,req.query.age],function(err, result) {
-      if (err){
-        console.log(err)
-      } else {
-        console.log(result);
-      var newresult = result[0];
-      // move to html routes
+  //   connection.query(dbQuery,[req.query.animal,req.query.gender,req.query.age],function(err, result) {
+  //     if (err){
+  //       console.log(err)
+  //     } else {
+  //       console.log(result);
+  //     var newresult = result[0];
+  //     // move to html routes
+    // Pet.findOne({
+    //   where: {
+        
+    //   }
+    // })
       
-      res.render('search',{ animal: newresult});
+      res.render('search',res);
 
-      // console.log(newresult);
-    }
+  //     // console.log(newresult);
+  //   }
+    });
+
+  app.post("/new", function(req,res){
+    console.log("Chirp Data:");
+    console.log(req.body);
+
+    Pet.create({
+      animal_name: req.body.animalname,
+      animal_type: req.body.animal,
+      gender: req.body.gender,
+      age: req.body.age,
+      location: req.body.location,
+      bio: req.body.bio,
+      photo: req.body.photo
+    }).then(function(results){
+      res.end();
+    });
+
     });
 
 
@@ -58,7 +91,7 @@ module.exports = function(app) {
 
 
 
-  });
+
   
 };
   // Add a chirp

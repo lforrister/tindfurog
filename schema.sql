@@ -12,3 +12,9 @@ CREATE TABLE `pets` (
   `photo` VARCHAR( 255 ) NOT NULL,
 
   PRIMARY KEY ( `id` ) );
+
+
+
+insert into pets (animal_name, animal_type, gender, age, location, bio, photo) values ("Ellie","dogs","female","youngadult","Pawlies Farm Cavaliers","She cool","");
+insert into pets (animal_name, animal_type, gender, age, location, bio, photo) values ("Mugsy","dogs","male","olderadult","Pawlies Farm Cavaliers","He cool","");
+insert into pets (animal_name, animal_type, gender, age, location, bio, photo) values ("Ripley","cats","female","olderadult","Pawlies Farm Cavaliers","RIP","");
